@@ -1,0 +1,62 @@
+.container {
+    background-image: url('/about.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 30vw;
+    margin-top: -5vw;
+
+}
+
+.leftSection > p {
+    color: #FFF;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.leftSection > svg {
+    width: 25vw;
+}
+.leftSection > h1 {
+    color: #FFF;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.rightSection > svg {
+    width: 40vw;
+    margin-top: -8.5vw;
+    /* aspect-ratio: inherit; */
+    height: fit-content;
+    /* width: fit-content; */
+    top: 0;
+    right: 0;
+    /* margin-lef: 5vw; */
+    /* position: absolute; */
+}

@@ -1,95 +1,47 @@
-import Image from 'next/image'
+'use client'
 import styles from './page.module.css'
+import { Suspense, useEffect } from "react"
+import { Canvas, useFrame ,useLoader } from "@react-three/fiber"
+import { Environment, OrbitControls } from "@react-three/drei"
+import { useRef } from 'react'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import Navbar from './components/Navbar'
 
 export default function Home() {
+  const Model = () => {
+    const mesh = useRef(null);
+    const gltf = useLoader(GLTFLoader, "/planet.glb");
+    useFrame(() => {
+      if (mesh.current.rotation.z === 360) {
+        mesh.current.rotation.z = 0
+      }
+      else {
+        mesh.current.rotation.z += 0.001;
+      }
+    });
+    return (
+      <>
+        <mesh ref={mesh}>
+          <primitive object={gltf.scene} scale={0.4} />
+        </mesh>
+      </>
+    );
+  };
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.container}>
+      <Navbar />
+      <div className={styles.section}>
+        <h1 className={styles.heading1}>TECH</h1>
+        <h1 className={styles.heading2}>SYNDICATE</h1>
+        <div className={styles.circle}>
+        <Canvas className={styles.globe} shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 40 }}>
+          <Suspense fallback={null}>
+            <Model />
+            <Environment preset="city" />
+          </Suspense>
+        </Canvas>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
