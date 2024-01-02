@@ -23,7 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Learn More
 
 <details>
-  <summary>SOMETHING FISHY GOING ON HERE?</summary>
+  <summary><b><i>SOMETHING FISHY GOING ON HERE?</i></b></summary>
   TS NEW WEBSITE?
 </details>
 
