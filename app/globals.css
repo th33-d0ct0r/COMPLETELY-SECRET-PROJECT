@@ -21,6 +21,18 @@ font-family: 'Outfit', sans-serif !important;
   background-repeat: no-repeat;
 }
 
+::-webkit-scrollbar {
+  /* display: none; */
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #16e16e;
+}
+
 a {
   color: inherit;
   text-decoration: none;

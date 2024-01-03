@@ -1,0 +1,69 @@
+.image {
+    width: 18vw;
+    height: 21.9vw;
+    object-fit: cover;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 20%, 80% 0%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    justify-content: center;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 21.9vw;
+    gap: 0.7vw;
+}
+
+.icon  {
+    width: 1vw;
+    aspect-ratio: 1;
+}
+.name1 {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pos {
+    color: rgba(255, 255, 255, 0.46);
+    font-family: Outfit;
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* gap: 0.2vw; */
+}
+
+.line {
+    width: 1px;
+    margin: 0.3vw 0;
+    height: 30%;
+    background: #fff;
+}

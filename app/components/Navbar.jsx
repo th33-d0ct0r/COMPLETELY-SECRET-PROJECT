@@ -26,7 +26,7 @@ export default function Navbar(props) {
             <a className={styles.link} href='/about' style={props.page === 'about'? {color: "black", background: "white"}: {}}>About</a>
             <a className={styles.link} href='/events' style={props.page === 'events'? {color: "black", background: "white"}: {}}>Events</a>
             <a className={styles.link} href='/team' style={props.page === 'team'? {color: "black", background: "white"}: {}}>Team</a>
-            <a className={styles.link} href='/robotronics' style={props.page === 'robotronics'? {color: "black", background: "white"}: {}}>Robotronics</a>
+            {/* <a className={styles.link} href='/robotronics' style={props.page === 'robotronics'? {color: "black", background: "white"}: {}}>Robotronics</a> */}
           </div>
         </div>
       </div>
