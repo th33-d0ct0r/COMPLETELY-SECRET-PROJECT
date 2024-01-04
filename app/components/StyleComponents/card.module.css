@@ -33,7 +33,18 @@
 .icon  {
     width: 1vw;
     aspect-ratio: 1;
+    cursor: pointer;
 }
+
+.icon > path {
+    fill: auto;
+    transition: all 0.5s ease;
+}
+
+/* .icon> path:hover {
+    fill: #16e16e;
+} */
+
 .name1 {
     color: #FFF;
     font-family: Outfit;

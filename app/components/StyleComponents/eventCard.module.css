@@ -1,0 +1,66 @@
+.card {
+    border: 2px solid #16e16e;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 26vw;
+    height: 12.5vw;
+    border-radius: 10px;
+    position: absolute;
+}
+.card2 {
+    border: 2px solid #16e16e;
+    background: #16e16e;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 26vw;
+    height: 12.5vw;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.card > h1 {
+    font-weight: 500;
+}
+.card2 > h1 {
+    color: #000;
+    font-weight: 500;
+}
+
+.card > p {
+    font-size: 1.1em;
+    /* margin-top: -1vw; */
+    margin-bottom: 1vw;
+}
+.card2 > p {
+    color: #000;
+    font-size: 1.1em;
+    /* margin-top: -1vw; */
+    margin-bottom: 1vw;
+}
+
+.card > a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: #16e16e 2px solid ;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.card2 > a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #000;
+    border: #16e16e 2px solid ;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.card > a:hover {
+    background: #16e16e;
+    color: black;
+}
